@@ -5,5 +5,3 @@ while True:
     print(x, y)
     sleep(1)
 
-
-

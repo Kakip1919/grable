@@ -1,13 +1,14 @@
 import pyautogui as gui
 from time import sleep
+four_angel = 0
 
 while True:
-    x, y = gui.locateCenterOnScreen('OK.png', confidence=0.8)
-    lft, t, w, h = gui.locateOnScreen("OK.png", confidence=0.8)
-    print(int(w / 2), int(h / 2))
-    print(x, y)
-    sleep(1)
+    if gui.locateOnScreen("four_angel.png", confidence=0.8):
+        four_angel += 1
+        x, y = gui.position()
 
+        print(four_angel)
+        sleep(1)
 
 
 
